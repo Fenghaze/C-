@@ -196,3 +196,9 @@ queue和priority_queue定义在`<queue>`头文件中
 优先队列允许我们为队列中的元素建立优先级：新加入的元素会排在所有优先级比它低的已有元素之前
 
 默认情况下，STL在元素类型上使用`<`运算符来确定相对优先级
+
+
+
+语法：priority_queue<Type, Container, Functional>
+Type 就是数据类型，Container 就是容器类型（Container必须是用数组实现的容器，比如vector,deque等等，但不能用 list。STL里面默认用的是vector），Functional 就是比较的方式（仿函数），当需要用自定义的数据类型时才需要传入这三个参数，使用基本数据类型时，只需要传入数据类型，默认是大顶堆
+
